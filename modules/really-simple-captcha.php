@@ -568,7 +568,7 @@ function wpcf7_cleanup_captcha_files() {
 
 	if ( $handle = opendir( $dir ) ) {
 		while ( false !== ( $file = readdir( $handle ) ) ) {
-			if ( ! preg_match( '/^[0-9]+\.(php|txt|png|gif|jpeg)$/', $file ) ) {
+			if ( ! preg_match( '/^[0-9A-Za-z]+\.(php|txt|png|gif|jpeg)$/', $file ) ) {
 				continue;
 			}
 
